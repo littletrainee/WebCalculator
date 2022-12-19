@@ -8,7 +8,7 @@
             "type": "msedge",
             "request": "launch",
             "name": "Debug On Microsoft Edge",
-            "url": "file:///H:/A/web_calculate/index.html",
+            "url": "file:///H:/A/web/web_calculate/index.html",
             "webRoot": "${workspaceFolder}"
         }
     ]
