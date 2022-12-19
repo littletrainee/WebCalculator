@@ -12,6 +12,7 @@ var point = false;
 var setsecond = false;
 
 /**
+ *  Set calculator sign.
  *  @param {string} v
  */
 function Arithmetic(v) {
@@ -36,6 +37,7 @@ function Arithmetic(v) {
 }
 
 /**
+ * Calculate user input value and return result.
  * @param {number} v1
  * @param {number} v2
  * @returns {string} 
@@ -61,6 +63,7 @@ function calculate(v1, v2) {
 
 
 /**
+ *  Print user Select to Result Label.
  *  @param {string} v
  */
 function Print(v) {
@@ -83,6 +86,7 @@ function Print(v) {
     }
 }
 
+// Print Calculate result to Result Label
 function Equal() {
     /** @type {string} */
     let result = document.getElementById("Result").innerHTML.split(',').join('');
@@ -113,15 +117,21 @@ function Clear() {
 }
 
 /**
- * @param {string} v
+ * Add Negative Sign Or Not.
  */
-function PostiveOrNagativeAndPercent(v) {
+function NegativeSign() {
     /** @type {number} */
-    var result = parseFloat(document.getElementById("Result").innerHTML);
-    if (v == "+/-") {
-        result *= -1;
-    } else if (v == "%") {
-        result /= 100;
-    }
+    let result = parseFloat(document.getElementById("Result").innerHTML);
+    result *= -1;
+    document.getElementById("Result").innerHTML = result;
+}
+
+/**
+ * Convert Value to Percentage.
+ */
+function ConvertPercentage() {
+    /** @type {number} */
+    let result = parseFloat(document.getElementById("Result").innerHTML);
+    result /= 100;
     document.getElementById("Result").innerHTML = result;
 }
